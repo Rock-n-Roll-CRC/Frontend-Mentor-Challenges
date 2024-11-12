@@ -1,0 +1,45 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.button-counter {
+  $this: &;
+
+  @include max-inline-size-tweak(16.09rem);
+  @include flex-shorthand(row, 0.7rem, center, space-between);
+  @include color-shorthand($color-pure-white, $color-primary-red);
+
+  padding: 1.3rem;
+  font: $font-weight-regular 1.4rem $font-family-sans-serif;
+  cursor: pointer;
+  border: 0;
+  border-radius: 100rem;
+  transition: all 0.15s;
+
+  &__button {
+    @include flex-shorthand(row, 0.7rem, center, center);
+
+    padding: 0.3rem;
+    cursor: pointer;
+    background-color: $color-primary-red;
+    border: 0.1rem solid $color-pure-white;
+    border-radius: 100rem;
+    transition: all 0.15s;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: $color-pure-white;
+
+        #{$this}__icon {
+          fill: $color-primary-red;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    @include max-size-shorthand(1rem, 1rem);
+
+    fill: $color-pure-white;
+    transition: all 0.15s;
+  }
+}

@@ -1,0 +1,23 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.shopping-cart-carbon-neutral {
+  @include flex-shorthand(row, 0.7rem, center, center);
+
+  padding: 1.6rem 0;
+  background-color: $color-neutral-rose-50;
+  border-radius: 0.5rem;
+
+  &__icon {
+    @include max-size-shorthand(2.2rem, 2.2rem);
+  }
+
+  &__description {
+    font-size: 1.4rem;
+  }
+
+  &__description span {
+    font-weight: $font-weight-semi-bold;
+    color: $color-neutral-rose-900;
+  }
+}

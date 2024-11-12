@@ -1,0 +1,14 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.order-total {
+  @include flex-shorthand(row, 0, center, space-between);
+
+  &__heading {
+    font-size: 1.4rem;
+  }
+
+  &__order-total {
+    font: $font-weight-bold 2.4rem $font-family-sans-serif;
+  }
+}

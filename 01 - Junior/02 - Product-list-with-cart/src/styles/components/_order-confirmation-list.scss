@@ -1,0 +1,15 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.order-confirmation-list {
+  @include flex-shorthand(column, 2.6rem);
+
+  padding: 2.4rem;
+  margin-block-end: 3.2rem;
+  background-color: $color-neutral-rose-50;
+
+  &__list {
+    @include flex-shorthand(column, 1.8rem);
+    @include remove-list-styles;
+  }
+}

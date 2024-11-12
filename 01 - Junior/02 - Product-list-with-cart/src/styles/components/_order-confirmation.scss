@@ -1,0 +1,43 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.order-confirmation {
+  inset: auto 0 0;
+  inline-size: 100%;
+  max-inline-size: none;
+  padding: 4rem 2.4rem 3.6rem;
+  border: 0;
+
+  @include media-up-shorthand(desktop) {
+    inset: 50%;
+    max-inline-size: 60rem;
+    padding: 4rem 4.4rem;
+    border-radius: 1rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &__icon {
+    @include max-size-shorthand(4.8rem, 4.8rem);
+
+    margin-block-end: 2.4rem;
+  }
+
+  &__description-box {
+    @include flex-shorthand(column, 0.7rem);
+
+    margin-block-end: 3.1rem;
+  }
+
+  &__heading {
+    font: $font-weight-bold 4rem / 1.2 $font-family-sans-serif;
+  }
+
+  &__description {
+    font-size: 1.6rem;
+    color: $color-neutral-rose-400;
+  }
+
+  &__button {
+    inline-size: 100%;
+  }
+}

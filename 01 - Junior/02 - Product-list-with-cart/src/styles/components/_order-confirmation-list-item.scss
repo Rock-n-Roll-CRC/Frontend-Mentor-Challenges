@@ -1,0 +1,54 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.order-confirmation-list-item {
+  @include flex-shorthand(row, 0, center, space-between);
+
+  padding-block-end: 1.5rem;
+  border-block-end: 0.1rem solid $color-neutral-rose-100;
+
+  &:last-child {
+    padding-block-end: 2.3rem;
+  }
+
+  &__body {
+    @include flex-shorthand(row, 1.6rem);
+  }
+
+  &__image {
+    max-inline-size: 4.8rem;
+    border-radius: 0.4rem;
+  }
+
+  &__content {
+    @include flex-shorthand(column, 0.8rem);
+  }
+
+  &__name {
+    @include max-inline-size-tweak(15rem);
+
+    overflow: hidden;
+    font: $font-weight-semi-bold 1.4rem $font-family-sans-serif;
+    color: $color-neutral-rose-900;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__quantity {
+    display: inline-block;
+    min-inline-size: 2.9rem;
+    font: $font-weight-semi-bold 1.4rem $font-family-sans-serif;
+    color: $color-primary-red;
+  }
+
+  &__price {
+    margin-inline-end: 0.8rem;
+    font-size: 1.4rem;
+    color: $color-neutral-rose-500;
+  }
+
+  &__total {
+    font: $font-weight-bold 1.55rem $font-family-sans-serif;
+    color: $color-neutral-rose-500;
+  }
+}

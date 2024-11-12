@@ -1,0 +1,7 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.shopping-cart-list {
+  @include flex-shorthand(column, 1.6rem);
+  @include remove-list-styles;
+}

@@ -1,0 +1,26 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.button-add-to-cart {
+  @include max-inline-size-tweak(16.09rem);
+  @include flex-shorthand(row, 0.7rem, center, center);
+  @include color-shorthand($color-pure-black, $color-pure-white);
+
+  padding: 1.05rem 0;
+  font: $font-weight-semi-bold 1.4rem $font-family-sans-serif;
+  cursor: pointer;
+  border: 0.1rem solid $color-neutral-rose-400;
+  border-radius: 100rem;
+  transition: all 0.15s;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $color-primary-red;
+      border-color: $color-primary-red;
+    }
+  }
+
+  &__icon {
+    @include max-size-shorthand(2.1rem, 2.1rem);
+  }
+}

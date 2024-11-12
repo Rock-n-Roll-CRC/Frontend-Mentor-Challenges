@@ -1,0 +1,31 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.button-remove-shopping-cart-list-item {
+  $this: &;
+
+  padding: 0.3rem;
+  margin-inline-end: 0.1rem;
+  cursor: pointer;
+  background-color: $color-pure-white;
+  border: 0.1rem solid $color-neutral-rose-400;
+  border-radius: 100rem;
+  transition: all 0.15s;
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: $color-neutral-rose-900;
+
+      #{$this}__icon {
+        fill: $color-neutral-rose-900;
+      }
+    }
+  }
+
+  &__icon {
+    max-inline-size: 1rem;
+    max-block-size: 1rem;
+    fill: $color-neutral-rose-400;
+    transition: all 0.15s;
+  }
+}

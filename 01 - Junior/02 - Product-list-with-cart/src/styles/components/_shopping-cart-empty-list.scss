@@ -1,0 +1,15 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.shopping-cart-empty-list {
+  @include flex-shorthand(column, 0.5rem, center);
+
+  &__icon {
+    max-inline-size: 12.7rem;
+  }
+
+  &__caption {
+    font: $font-weight-semi-bold 1.4rem $font-family-sans-serif;
+    color: $color-neutral-rose-500;
+  }
+}

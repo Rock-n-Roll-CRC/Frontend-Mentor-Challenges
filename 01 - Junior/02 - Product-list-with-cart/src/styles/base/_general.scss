@@ -1,0 +1,24 @@
+@use "../settings" as *;
+@use "../tools" as *;
+@use "sass:map";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: $font-weight-regular 1rem / 1.5 $font-family-sans-serif;
+}
+
+main {
+  @include flex-shorthand(column, 3.2rem, center);
+
+  padding: 2.1rem 0;
+
+  @include media-up-shorthand(desktop) {
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 8.5rem 11.2rem;
+  }
+}

@@ -1,0 +1,25 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.product-list {
+  @include flex-shorthand(column, 3rem);
+
+  max-inline-size: 32.7rem;
+
+  @include media-up-shorthand(desktop) {
+    max-inline-size: none;
+  }
+
+  &__heading {
+    font: $font-weight-bold 4rem $font-family-sans-serif;
+  }
+
+  &__body {
+    @include flex-shorthand(column, 2.42rem);
+    @include remove-list-styles;
+
+    @include media-up-shorthand(desktop) {
+      @include grid-shorthand(auto, repeat(3, auto), 3.2rem, 2.3rem);
+    }
+  }
+}

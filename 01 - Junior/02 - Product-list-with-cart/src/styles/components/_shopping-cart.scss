@@ -1,0 +1,26 @@
+@use "../settings" as *;
+@use "../tools" as *;
+
+.shopping-cart {
+  @include max-inline-size-tweak(32.8rem);
+  @include flex-shorthand(column, 2.4rem);
+
+  padding: 2.5rem 2.45rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 1rem #0000000d;
+
+  @include media-up-shorthand(desktop) {
+    gap: 2.9rem;
+    max-inline-size: 38.5rem;
+    padding: 2.8rem 2.45rem 4.1rem;
+
+    &:has(.shopping-cart-list) {
+      gap: 2.4rem;
+    }
+  }
+
+  &__heading {
+    font: $font-weight-bold 2.4rem $font-family-sans-serif;
+    color: $color-primary-red;
+  }
+}
